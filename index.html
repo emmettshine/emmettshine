@@ -1,0 +1,197 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="robots" content="noindex">
+
+  <title>Emmett Shine</title>
+  <meta name="description" content="I'm a designer and entrepreneur.">
+
+  <meta property="og:title" content="Emmett Shine"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://erkhlm.github.io/emmettshine"/>
+  <meta property="og:image" content="https://erkhlm.github.io/emmettshine/og.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="emmettshine.co">
+  <meta property="twitter:url" content="https://www.emmettshine.co/">
+  <meta name="twitter:title" content="Emmett Shine">
+  <meta name="twitter:description" content="I'm a designer and entrepreneur.">
+  <meta name="twitter:image" content="https://erkhlm.github.io/emmettshine/og.png">
+
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <a href="#" onclick="window.location.reload()"><span id="date-time"></span></a>
+  </header>
+
+  <main>
+    <p class="main-intro">
+      Hello.
+      <br>
+      My name is Emmett Shine.
+      <br>
+      <br>
+      I’m a designer and entrepreneur focused on the intersection of art, technology, culture, and commerce.
+      <br>
+      <br>
+      In the last ten years, I’ve co-founded six companies and helped launch more than fifty businesses, seven of which have had successful exits.
+      <br>
+      <br>
+      Work with me at <a href="">Little Plains</a>.
+      <br>
+      Talk to me at <a href="">MentorPass</a>.
+      <br>
+      Inquire about <a href="">Pattern</a> at <a href="">Hello</a>.
+    </p>
+
+    <div class="two-col">
+      <div class="left">
+        <p class="heading">Founded</p>
+        <p class="main-body-copy" style="max-width: 525px;">
+          Gin Lane, Pattern, Little Plains, Fallen Grape, JAJA, RMX
+        </p>
+
+        <p class="heading">Brought to Market</p>
+        <p class="main-body-copy">
+          Harrys, Hims, Hers, Stadium Goods, Neuralink, AYR, Sunday Goods Cedar, Hello Alfred, Recess, 365 by Whole Foods, Made Nice, Cadre, Company, Taika, Haus, Alma, Smile Direct Club, Dia & Co., Open Spaces
+        </p>
+
+        <p class="heading">Early Stage Growth</p>
+        <p class="main-body-copy" style="max-width: 516px;">
+          Sweetgreen, Warby Parker, Everlane, Quip, Shinola, Bonobos, Reformation, Shake Shack, Tartine, Coffee Manufactory, Honest Buildings, Go Get ‘Em Tiger
+        </p>
+
+        <p class="heading">Acquired by Pattern</p>
+        <p class="main-body-copy" style="max-width: 516px;">
+          GIR, Letterfolk, Poketo, Yield, Onsen
+        </p>
+
+        <p class="heading">Advisor</p>
+        <p class="main-body-copy">
+          Care/Of (acq. Bayer), Geneva, Recess, minisocial, Sunday Goods, Arbor Energy, Golden Ratio Coffee, Shhhowercap, Nova
+        </p>
+      </div>
+
+      <div class="right">
+        <p class="heading">Investor</p>
+        <p class="main-body-copy">
+          SmileDirectClub (IPO), Shake Shack (IPO), Sweetgreen (IPO), Stadium Goods (acq. by Farfetch), Hims (merged with Oaktree SPAC), Rocean (acq. Pentair), Harry’s, Cadre, Quip, Soft Services, Omsom, Tulip, AIR HQ, Off Limits, Geenie World, Ghia
+        </p>
+
+        <p class="heading">Passion Projects</p>
+        <p class="main-body-copy">
+          Best Friends Gang, *2024 Movie
+        </p>
+
+        <p class="heading">Select Press</p>
+        <p class="main-body-copy">
+          <a href="">Harvard Business School</a>
+          <br>
+          <a href="">DTC Design</a>
+          <br>
+          <a href="">NYT Magazine</a>
+        </p>
+
+        <p class="heading">Miscellaneous</p>
+        <p class="main-body-copy">
+          I root for the New York Jets
+          <br>
+          I live in LA & NY
+          <br>
+          I like skateboarding & surfing
+          <br>
+          I’m getting married in September
+        </p>
+
+        <p class="heading">Online</p>
+        <p class="main-body-copy">
+          twitter, instagram, linkedin
+        </p>
+      </div>
+    </div>
+
+    <div class="new-note">
+      <!-- <input type="text"> -->
+      <textarea></textarea>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-icons">
+      <div id="share-target">
+        <img id="share" src="./share-icon.png" alt="share icon">
+      </div>
+      <img id="delete" src="./delete-icon.png" onclick="handleDelete();" alt="delete icon">
+      <img id="create" src="./create-icon.png" onclick="handleCreate();" alt="create icon">
+    </div>
+
+  </footer>
+
+  <script type="text/javascript">
+
+    const handleDelete = () => {
+      // console.log('deleting');
+      location.reload();
+    }
+
+    const handleCreate = () => {
+      // console.log('creating');
+      document.querySelector('.main-intro').style.display = 'none';
+      document.querySelector('.two-col').style.display = 'none';
+      document.querySelector('.new-note').style.display = 'flex';
+      let textArea = document.querySelector('.new-note textarea');
+      textArea.value = '';
+      textArea.focus();
+      document.querySelector('body').classList.add('create')
+      
+    }
+
+
+    let shareData = {
+      title: 'Emmett Shine',
+      text: "I'm a designer and entrepreneur.",
+      url: 'https://erkhlm.github.io/emmettshine'
+    }
+
+    const btn = document.querySelector('#share');
+
+    btn.addEventListener('click', () => {
+      navigator.share(shareData)
+        .then(() =>
+          console.log('shared!')
+        )
+        .catch((e) =>
+          console.log(e)
+        )
+    });
+
+
+    window.addEventListener('load', () => {
+
+      // set date and time
+      let d = new Date();
+      let hours = d.getHours();
+      let minutes = d.getMinutes();
+      let ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+      let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      let dateStr = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}  ${hours}:${minutes} ${ampm.toUpperCase()}`;
+
+      document.getElementById('date-time').innerText = dateStr;
+
+    });
+
+
+  </script>
+
+
+
+</body>
+</html>
