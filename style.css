@@ -50,6 +50,7 @@ header {
 main {
   margin: 0 100px;
   margin-bottom: 60px;
+  opacity: 0;
 }
 
 a {
