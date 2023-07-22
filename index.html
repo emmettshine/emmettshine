@@ -190,6 +190,12 @@
 
       document.getElementById('date-time').innerText = dateStr;
 
+
+      // fade in whole page after load
+      let mainElem = document.querySelector('main');
+      mainElem.style.opacity = 1;
+      mainElem.style.visibility = 'visible';
+
     });
 
     
