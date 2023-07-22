@@ -38,6 +38,7 @@ header {
   justify-content: center;
   /*height: 60px;*/
   height: 72px;
+  opacity: 0;
 }
 
 #date-time {
