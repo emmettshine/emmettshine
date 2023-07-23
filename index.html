@@ -241,9 +241,9 @@
 
     btn.addEventListener('click', () => {
       navigator.share(shareData)
-        .then(() =>
+        .then(() => {
           // console.log('shared!')
-        )
+        })
         .catch((e) =>
           console.log(e)
         )
