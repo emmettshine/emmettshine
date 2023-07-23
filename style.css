@@ -30,6 +30,7 @@ body {
   background-image: url('./paper-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: .4s ease-in;
 }
 
 header {
