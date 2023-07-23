@@ -52,7 +52,7 @@ main {
   margin: 0 100px;
   margin-bottom: 60px;
   opacity: 0;
-  transition: .5s ease-in;
+  transition: 1.0s ease-in;
 }
 
 a {
