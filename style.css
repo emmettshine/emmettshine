@@ -15,7 +15,7 @@ body, html, p, span, div, ul, li, a, h1, h2, h3, h4, h5, input, textarea, img {
 /*  color: #666;*/
   color: #494949;
   text-shadow: -0.5px 0.75px 1px rgba(255, 255, 255, 0.75), 0.25px -0.25px 1.25px rgba(51, 51, 51, 0.55);
-  transition: 0.5s ease-in-out;
+  transition: 0.35s ease-in-out;
 }
 
 ::-moz-selection {
@@ -39,7 +39,7 @@ header {
   /*height: 60px;*/
   height: 72px;
   opacity: 0;
-  transition: .5s ease-in;
+  transition: .25s ease-in;
 }
 
 #date-time {
