@@ -307,7 +307,7 @@ textarea {
 
 /* desktop */
 @media (min-width: 824px) {
-  #share {
+/*   #share {
     display: none;
-  }
+  } */
 }
