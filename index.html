@@ -240,13 +240,17 @@
     const btn = document.querySelector('#share');
 
     btn.addEventListener('click', () => {
-      navigator.share(shareData)
-        .then(() => {
-          // console.log('shared!')
-        })
-        .catch((e) =>
-          console.log(e)
-        )
+      if (window.innerWidth < 824) {
+        navigator.share(shareData)
+          .then(() => {
+            // console.log('shared!')
+          })
+          .catch((e) =>
+            console.log(e)
+          )
+      } else {
+        window.location.href = "mailto:emmettshine@gmail.com"
+      }
     });
 
 
