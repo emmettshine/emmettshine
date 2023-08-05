@@ -27,7 +27,6 @@ body, html, p, span, div, ul, li, a, h1, h2, h3, h4, h5, input, textarea, img {
 }
 
 body {
-  background-image: url('./paper-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   transition: .4s ease-in;
