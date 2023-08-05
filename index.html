@@ -213,18 +213,16 @@
 
     const handleDelete = () => {
       // console.log('deleting');
-      // location.reload();
       const bodyElem = document.querySelector('body');
-      body.style.backgroundImage = 'none';
-      body.style.background = 'black';
-      body.style.display = 'flex';
-      body.style.alignItems = 'center';
-      body.style.justifyContent = 'center';
-      body.style.height = '100vh';
-      body.style.color = 'white';
-      body.innerHTML = '';
-      body.innerText = 'empty';
-      
+      bodyElem.style.backgroundImage = 'none';
+      bodyElem.style.background = 'black';
+      bodyElem.style.display = 'flex';
+      bodyElem.style.alignItems = 'center';
+      bodyElem.style.justifyContent = 'center';
+      bodyElem.style.height = '100vh';
+      bodyElem.style.color = 'white';
+      bodyElem.innerHTML = '';
+      bodyElem.innerText = 'empty';
     }
 
     const handleCreate = () => {
