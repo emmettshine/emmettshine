@@ -210,7 +210,7 @@
 
   <script type="text/javascript">
 
-    const handleDelete = () => {
+    const handleDelete = async () => {
       // console.log('deleting');
       const bodyElem = document.querySelector('body');
       const backgroundElem = document.getElementById('background-fade');
@@ -223,7 +223,10 @@
       bodyElem.style.height = '100vh';
       bodyElem.style.color = 'white';
       bodyElem.innerHTML = '';
-      bodyElem.innerText = 'empty';
+      bodyElem.innerHTML = '<p id="empty-text">🗑️ empty.</p>';
+      // sleep for 1s to fade in '🗑️ empty.' text after black background
+      await new Promise(r => setTimeout(r, 1000));
+      document.getElementById('empty-text').style.opacity = 1;
     }
 
     const handleCreate = () => {

@@ -127,6 +127,12 @@ body.create main {
   width: 23.2px;
 }
 
+#empty-text {
+  color: white;
+  transition: 1.0s ease-in; 
+  opacity: 0;
+}
+
 #create {
   width: 31.2px;
 }
