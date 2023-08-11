@@ -4,7 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
   <title>designer and entrepreneur. ✍️ </title>
-<!--   <meta name="description" content="designer and entrepreneur. ✍️"> -->
 
   <meta property="og:title" content="Emmett Shine ✍️| designer and entrepreneur."/>
   <meta property="og:type" content="website"/>
@@ -16,7 +15,6 @@
   <meta property="twitter:domain" content="emmettshine.com">
   <meta property="twitter:url" content="https://www.emmettshine.com/">
   <meta name="twitter:title" content="Emmett Shine">
-<!--   <meta name="twitter:description" content="designer and entrepreneur ✍."> -->
   <meta name="twitter:image" content="https://www.emmettshine.com/og.png">
 
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
@@ -24,6 +22,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <img id="background-fade" src="./paper-bg.png">
   <header>
     <a href="#" onclick="window.location.reload()"><span id="date-time"></span></a>
   </header>
@@ -214,6 +213,8 @@
     const handleDelete = () => {
       // console.log('deleting');
       const bodyElem = document.querySelector('body');
+      const backgroundElem = document.getElementById('background-fade');
+      backgroundElem.style.opacity = 0;
       bodyElem.style.backgroundImage = 'none';
       bodyElem.style.background = 'black';
       bodyElem.style.display = 'flex';
@@ -231,7 +232,11 @@
       document.querySelector('.two-col').style.display = 'none';
       document.querySelector('.new-note').style.display = 'flex';
       let textArea = document.querySelector('.new-note textarea');
-      textArea.value = '';
+      textArea.value = `～pls use for notes～
+
+*━(◕‿◕✿)━*
+
+`;
       textArea.focus();
       document.querySelector('body').classList.add('create')
       
@@ -277,20 +282,16 @@
 
 
       // fade in whole page after load
+      const backgroundElem = document.getElementById('background-fade');
+      backgroundElem.style.opacity = 1;
       let bodyElem = document.querySelector('body');
-      bodyElem.style.backgroundImage = "url(./paper-bg.png)";
       bodyElem.style.opacity = 1;
       let headerElem = document.querySelector('header');
       headerElem.style.opacity = 1;
 
     });
 
-    
-    // AOS.init();
-
   </script>
-
-
 
 </body>
 </html>
